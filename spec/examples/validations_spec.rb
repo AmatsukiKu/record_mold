@@ -75,7 +75,7 @@ RSpec.describe RecordMold do
   end
 
   describe 'Instance of class included this module' do
-    let(:user) { User.new(name: 'Bob', age: 18, left: false, my_number: '00000001') }
+    let(:user) { User.new(name: 'Bob', age: 18, left: false, my_number: '00000001', register_method: :email) }
 
     context 'user\'s data is valid' do
       it 'is valid' do

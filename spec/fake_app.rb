@@ -16,6 +16,7 @@ end
 
 # models
 class User < ActiveRecord::Base
+  enum register_method: {email: 1, twitter: 2, facebook: 3, google: 4}
 end
 
 # migrations
@@ -27,6 +28,7 @@ class CreateAllTables < ActiveRecord::VERSION::MAJOR >= 5 ? ActiveRecord::Migrat
       t.integer :age, null: false
       t.integer :height
       t.boolean :left, null: false
+      t.integer :register_method, null: false
       t.string :my_number, null: false
       t.index :my_number, unique: true
       t.datetime "created_at", null: false

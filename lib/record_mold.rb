@@ -1,6 +1,7 @@
 module RecordMold
   def self.included(model)
     exception_columns = model.send(:timestamp_attributes_for_create) + model.send(:timestamp_attributes_for_update) + model.defined_enums.keys
+    exception_columns = (exception_columns + exception_columns.map { |column| model.attribute_aliases[column] }.compact).uniq
     model.columns.each do |field|
       next if field.name == model.primary_key
       next if exception_columns.include?(field.name)

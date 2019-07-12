@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    record_mold (0.1.0)
+    record_mold (0.1.1)
       activerecord
 
 GEM

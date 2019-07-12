@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "record_mold"
-  spec.version       = '0.1.0'
+  spec.version       = '0.1.1'
   spec.authors       = ["Kenji Gonnokami"]
   spec.email         = ["amatsukikuu@gmail.com"]
   spec.description   = 'Provide validations from ActiveRecord schema information.'
